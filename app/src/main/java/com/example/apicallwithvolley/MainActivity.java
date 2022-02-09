@@ -15,10 +15,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.apicallwithvolley.Model.Model;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,12 +54,17 @@ public class MainActivity extends AppCompatActivity {
                             //String ob=response.getString("userId");
                             Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
 
-                            String str="";
+                            String str="",str2="";
+
                             for(int i=0;i<response.length();i++)
 
                             {
                                 JSONObject obj=response.getJSONObject(i);
-                                str=str + obj.getString("userId")+"\n";
+                                //str=str + obj.getString("userId")+"\n";
+                               // str2=str2 + obj.getString("title")+"\n";
+                                str=obj.getString("userId")+" "+obj.getString("title");
+
+
 
                             }
                             tv.setText(str);
