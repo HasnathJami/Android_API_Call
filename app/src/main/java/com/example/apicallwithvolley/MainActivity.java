@@ -15,7 +15,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.apicallwithvolley.Model.Model;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btn=findViewById(R.id.getDataButtonId);
         tv=findViewById(R.id.textId);
 
-       Volley volley;
+
         RequestQueue requestQueue=Volley.newRequestQueue(this);
         //String url="https://jsonplaceholder.typicode.com/todos/1";
         String url="https://jsonplaceholder.typicode.com/posts";
